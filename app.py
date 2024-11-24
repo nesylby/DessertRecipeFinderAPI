@@ -37,7 +37,7 @@ api.specs = openapi_spec  # Assign the loaded OpenAPI YAML specification to Flas
 
 # ------------------------------ Recipe Endpoints ------------------------------
 
-@api.route('/recipes')
+@api.route('/Recipes')
 class RecipeList(Resource):
     def get(self):
         """Retrieve recipes with filters"""
