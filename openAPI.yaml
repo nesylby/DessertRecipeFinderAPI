@@ -1,0 +1,722 @@
+openapi: 3.0.0
+info:
+  title: Culinary School Recipe Finder API
+  description: >
+    The Culinary School Recipe Finder API provides a platform for culinary students, nutritionists, and hospitals to access, organize, and explore recipes. Recipes can include desserts, main courses, and more, categorized by type, major ingredients, and country of origin. Additional focus is on dietary preferences, allergens, and nutritional details to ensure suitability for various health needs and cultural practices.
+  version: 1.0.0
+servers:
+  - description: Auto Mocking Server
+    url: 'https://virtserver.swaggerhub.com/20220024573/Milestone1/1.0.0'
+paths:
+  /recipes:
+    get:
+      tags:
+        - Recipe
+      summary: Retrieve a list of recipes
+      description: >
+        Get a list of recipes with filters for categories, countries, types, and additional health-related parameters.
+      parameters:
+        - in: query
+          name: category
+          schema:
+            type: string
+            enum: [ "Hot dessert", "Cold Dessert", "Baked Dessert", "Fried Dessert" , "Dessert Dinks", "Custard" ]
+          description: The category of the recipe.
+        - in: query
+          name: origin
+          schema:
+            type: string
+            enum: [ "Philippines", "Korea", "Thailand", "Others" ]
+          description: Filter recipes by country of origin.
+        - in: query
+          name: type
+          schema:
+            type: string
+            enum: [ "Sticky Rice", "Cookies","Candies", "Cakes", "Pies" ]
+            description: Filter recipes by type (e.g., cold, hot, pastries).
+        - in: query 
+          name: serve_size
+          schema: 
+            type: integer
+          description: serving size of the recipe
+        - in: query
+          name: main_ingredient
+          schema:
+            type: string
+          description: Filter by the primary ingredient.
+        - in: query
+          name: allergen
+          schema:
+            type: string
+          description: Filter recipes by allergen (e.g., peanuts, dairy).
+        - in: query
+          name: dietary_benefits
+          schema:
+            type: string
+            description: Filter recipes by dietary benefits (e.g., halal, vegan).
+        - in: query
+          name: calories
+          schema:
+            type: integer
+          description: Maximum calorie count for the recipe.
+        - in: query 
+          name: difficulty
+          schema: 
+            type: string
+            enum:  ["Easy", "Moderate", "Difficult" ]
+          description: Difficulty of the recipe.
+        - in: query
+          name: Vegan
+          schema:
+            type: string
+            enum: ["NO", "YES"]
+          description: Is the recipe vegan or no. 
+        - in: query
+          name: Author
+          schema:
+            type: string
+          description: Author of a recipe
+
+      responses:
+        '200':
+          description: A list of recipes.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Recipe:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Recipe'
+                  Ingredients:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Ingredients'
+                  NutritionInfo:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/NutritionInfo'
+                  DietaryBenefits:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/DietaryBenefits'
+                  Picture:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Picture'
+                  Video:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Video'
+                  Author:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Author'  
+                    
+                  
+        '400':
+          description: Invalid parameters
+    post:
+      tags:
+        - Recipe
+      summary: Add a new recipe
+      security:
+        - apiKeyUser: []  
+      description: Adds a new recipe to the collection, with additional nutritional and dietary information.
+      requestBody:
+        required: true
+        content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Recipe:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Recipe'
+                  Ingredients:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Ingredients'
+                  NutritionInfo:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/NutritionInfo'
+                  DietaryBenefits:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/DietaryBenefits'
+                  Picture:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Picture'
+                  Video:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Video'
+                  Author:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Author' 
+      responses:
+        '201':
+          description: Recipe created successfully
+        '400':
+          description: Invalid input
+
+  '/recipes/{name}':
+    get:
+      tags:
+        - Recipe
+      summary: Retrieve a specific dessert recipe by name
+      security:
+        - apiKeyUser: []  
+      description: Get the details of a recipe by recipe name.
+      parameters:
+        - in: path
+          name: name
+          required: true
+          schema:
+            type: string
+          description: The name of the recipe.
+        - in: query
+          name: Author
+          required: false
+          schema:
+            $ref: "#/components/schemas/User"
+          description: The author of the recipe
+        - in: query
+          name: Ingredients
+          required: false
+          schema:
+            $ref: "#/components/schemas/Ingredients"
+        - in: query
+          name: nutrition_info
+          required: false
+          schema:
+            $ref: "#/components/schemas/NutritionInfo"
+        - in: query
+          name: Dietary_benefits
+          required: false
+          schema:
+            $ref: "#/components/schemas/DietaryBenefits"
+      responses:
+        '200':
+          description: Recipe details.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Recipe:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Recipe'
+                  Ingredients:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Ingredients'
+                  NutritionInfo:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/NutritionInfo'
+                  DietaryBenefits:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/DietaryBenefits'
+                  Picture:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Picture'
+                  Video:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Video'
+                  Author:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Author' 
+        '404':
+          description: Recipe not found
+          
+    put:
+      tags:
+        - Recipe
+      summary: Replace the entire recipe with the provided data
+      parameters:
+        - in: path
+          name: name
+          required: true
+          schema:
+            type: string
+          description: The unique identifier for the recipe
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Recipe"
+      responses:
+        200:
+          description: Recipe successfully updated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Recipe:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Recipe'
+                  Ingredients:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Ingredients'
+                  NutritionInfo:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/NutritionInfo'
+                  DietaryBenefits:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/DietaryBenefits'
+                  Picture:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Picture'
+                  Video:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Video'
+                  Author:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Author' 
+              
+        400:
+          description: Missing fields, not all data was updated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  missing_fields:
+                    type: array
+                    items:
+                      type: string
+
+        404:
+          description: Recipe not found
+
+    patch:
+      tags:
+        - Recipe
+      summary: Update individual fields of a recipe
+      parameters:
+        - in: path
+          name: name
+          required: true
+          schema:
+            type: string
+          description: The name of the recipe.
+        - in: query
+          name: description
+          required: false
+          schema:
+            type: string
+          description: A description of the recipe
+        - in: query
+          name: origin
+          required: false
+          schema:
+            type: string
+          description: The country of origin of the recipe
+        - in: query
+          name: type
+          required: false
+          schema:
+            type: string
+          description: The type of dish (e.g., dessert, appetizer)
+        - in: query
+          name: servings
+          required: false
+          schema:
+            type: integer
+          description: The number of servings the recipe yields
+        - in: query
+          name: prep_time
+          required: false
+          schema:
+            type: integer
+          description: Preparation time in minutes
+        - in: query
+          name: cook_time
+          required: false
+          schema:
+            type: integer
+          description: Cook time in minutes
+        - in: query
+          name: majorIngredient
+          required: false
+          schema:
+            type: string
+          description: Primary ingredient used in the recipe
+        - in: query
+          name: instructions
+          required: false
+          schema:
+            type: string
+          description: Step-by-step instructions for preparing the dish
+        - in: query
+          name: difficulty
+          required: false
+          schema:
+            type: string
+          description: The difficulty level of the recipe
+        - in: query
+          name: Author
+          required: false
+          schema:
+            $ref: "#/components/schemas/User"
+          description: The author of the recipe
+        - in: query
+          name: Ingredients
+          required: false
+          schema:
+            $ref: "#/components/schemas/Ingredients"
+        - in: query
+          name: nutrition_info
+          required: false
+          schema:
+            $ref: "#/components/schemas/NutritionInfo"
+        - in: query
+          name: Dietary_benefits
+          required: false
+          schema:
+            $ref: "#/components/schemas/DietaryBenefits"
+        - in: query
+          name: Pictures
+          required: false
+          schema:
+            $ref: "#/components/schemas/Picture"
+        - in: query
+          name: Videos
+          required: false
+          schema:
+            $ref: "#/components/schemas/Video"
+
+      responses:
+        200:
+          description: Recipe updated successfully
+        400:
+          description: Invalid request parameters
+        404:
+          description: Recipe not found
+    delete:
+      tags:
+        - Recipe
+      summary: Delete an existing dessert recipe by name
+      security:
+        - apiKeyAuth: []  
+      description: Deletes a specific recipe by name.
+      parameters:
+        - in: path
+          name: name
+          required: true
+          schema:
+            type: string
+          description: The name of the recipe to delete.
+      responses:
+        '200':
+          description: Recipe deleted successfully
+        '404':
+          description: Recipe not found
+  /users/login:
+    post:
+      tags:
+        - User
+      summary: User Login
+      description: >
+        Allows users to log in with their credentials (email and password). Returns a secure API key or JWT token for subsequent authenticated requests.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: The email address of the user
+                  example: johndoe@example.com
+                password:
+                  type: string
+                  description: The password of the user
+                  example: securepassword123
+      responses:
+        '200':
+          description: Login successful, returns an API key or JWT token.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    description: Auth token (JWT or API key)
+                    example: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiVTAwMSIsInJvbGUiOiJzdHVkZW50In0.JrP4lwQeUwXTbFw_oIjbwQ"
+        '400':
+          description: Invalid credentials.
+        '401':
+          description: Unauthorized – Invalid credentials or missing token.
+          
+  /users/{userID}/author:
+    get:
+      tags:
+        - User
+      summary: Retrieve author details and their posted recipes
+      description: Retrieves the user details (author information) and all recipes they have posted. Requires authentication with an API key or JWT token.
+      parameters:
+        - in: path
+          name: userID
+          required: true
+          schema:
+            type: string
+          description: The user ID of the author to retrieve.
+      security:
+        - apiKeyAuth: []
+      responses:
+        '200':
+          description: Author details and their recipes retrieved successfully.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  user:
+                    $ref: '#/components/schemas/Author'
+                  posts:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Recipe'
+        '401':
+          description: Unauthorized – Missing or invalid token.
+        '404':
+          description: User not found.
+
+
+components:
+  schemas:
+    Recipe:
+      type: object
+      properties:
+        recipeID:
+          type: string
+          description: Unique identifier for the recipe
+          example: "D001"
+        name:
+          type: string
+          description: Name of the recipe
+          example: "Biko"
+        description:
+          type: string
+          description: A short description of the recipe
+          example: "A rich and moist chocolate cake topped with creamy chocolate frosting."
+        origin:
+          type: string
+          description: The country of origin for the recipe
+          example: "Philippines"
+        type:
+          type: string
+          description: Type of dish (e.g., dessert, appetizer, etc.)
+          example: "Dessert"
+        servings:
+          type: integer
+          description: Number of servings the recipe yields
+          example: 4
+        prep_time:
+          type: integer
+          description: Preparation time in minutes
+          example: 20
+        cook_time:
+          type: integer
+          description: Cook time in minutes
+          example: 30
+        difficulty:
+          type: string
+          description: difficulty of recipe
+          example: Difficult
+        majorIngredient:
+          type: string
+          description: Primary ingredient used in the recipe
+          example: "Rice"
+        instructions:
+          type: string
+          description: Step-by-step instructions for preparing the dish
+          example: "Combine the sticky rice and water in a rice cooker..."
+            
+    Ingredients:
+      type: object
+      properties:
+        recipeID:
+          type: string
+          description: Unique identifier for the recipe
+          example: "D001"
+        name:
+          type: string
+          description: The name of the ingredient
+          example: "All-Purpose Flour"
+        quantity:
+          type: number
+          description: Quantity of the ingredient
+          example: 200
+        unit:
+          type: string
+          description: Unit of measurement (e.g., grams, cups)
+          example: "grams"
+
+    NutritionInfo:
+      type: object
+      properties:
+        recipeID:
+          type: string
+          description: Unique identifier for the recipe
+          example: "D001"
+        calories_per_serving:
+          type: integer
+          description: Calories per serving
+          example: 350
+        protein_grams:
+          type: integer
+          description: Protein content in grams per serving
+          example: 5
+        fat_grams:
+          type: integer
+          description: Fat content in grams per serving
+          example: 15
+        carbohydrates_grams:
+          type: integer
+          description: Carbohydrates content in grams per serving
+          example: 50
+        sugar_grams:
+          type: integer
+          description: Sugar content in grams per serving
+          example: 20
+
+    DietaryBenefits:
+      type: object
+      properties:
+        recipeID:
+          type: string
+          description: Unique identifier for the recipe
+          example: "D001"
+        is_vegan:
+          type: boolean
+          description: Whether the recipe is vegan
+          example: false
+        is_vegetarian:
+          type: boolean
+          description: Whether the recipe is vegetarian
+          example: true
+        is_gluten_free:
+          type: boolean
+          description: Whether the recipe is gluten-free
+          example: false
+        allergens:
+          type: array
+          items:
+            type: string
+          description: List of allergens
+          example: ["Nuts", "Dairy"]
+    
+    Picture:
+      type: object
+      properties:
+        recipeID:
+          type: string
+          description: Unique identifier for the recipe
+          example: "D001"
+        pictures:
+          type: array
+          items:
+            type: string
+            description: URLs for images of the recipe
+          example: ["http://example.com/image1.jpg"]
+    Video:
+      type: object
+      properties:
+        recipeID:
+          type: string
+          description: Unique identifier for the recipe
+          example: "D001"  
+        videos:
+          type: array
+          items:
+            type: string
+            description: URLs for images of the recipe
+          example: ["http://example.com/image1.jpg"]
+
+
+    User:
+      type: object
+      properties:
+        userID:
+          type: string
+          description: The unique identifier for the user
+          example: U001
+        name:
+          type: string
+          description: Full name of the user
+          example: John Doe
+        email:
+          type: string
+          description: Email address of the user
+          example: johndoe@example.com
+        role:
+          type: string
+          description: The role of the user (e.g., student, nutritionist, etc.)
+          example: student
+
+    Author:
+      type: object
+      properties:
+        recipeID:
+          type: string
+          description: Unique identifier for the recipe
+          example: "D001"
+        userID:
+          type: string
+          description: The unique identifier for the author
+          example: A001
+        name:
+          type: string
+          description: Full name of the author
+          example: John Doe
+        email:
+          type: string
+          description: Email address of the author
+          example: johndoe@example.com
+        role:
+          type: string
+          description: The role of the user (author)
+          example: author
+        bio:
+          type: string
+          description: Short biography of the author
+          example: "John is a professional nutritionist and food writer."
+        
+          
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: API Key or JWT token for authorization.
+    apiKeyUser:
+      type: apiKey
+      in: header
+      name: Authorization
+      description: API Key or JWT token for authorization.
