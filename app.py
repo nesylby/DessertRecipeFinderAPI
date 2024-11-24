@@ -79,31 +79,6 @@ class RecipeList(Resource):
         recipe_id = recipes_collection.insert_one(data).inserted_id
         return jsonify({"message": "Recipe created successfully", "id": str(recipe_id)}), 201
     
-# ------------------------------ Ingredient Endpoints ----------------------------
-
-@api.route('/Ingredients')
-class IngredientList(Resource):
-    def get(self):
-        """Retrieve ingredients with filters"""
-        filters = {}
-        if 'name' in request.args:
-            filters['name'] = request.args['name']
-
-        ingredients = list(ingredients_collection.find(filters))
-        for ingredient in ingredients:
-            ingredient['_id'] = str(ingredient['_id'])
-        return jsonify(ingredients)
-
-    @jwt_required() 
-    def post(self):
-        """Add a new ingredient"""
-        data = request.get_json()  
-        if not data:
-            return jsonify({"error": "Invalid input"}), 400
-        
-        ingredient_id = ingredients_collection.insert_one(data).inserted_id
-        return jsonify({"message": "Ingredient created successfully", "id": str(ingredient_id)}), 201
-
 # ------------------------------ User Authentication Endpoints ------------------------------
 
 @api.route('/users/login')
