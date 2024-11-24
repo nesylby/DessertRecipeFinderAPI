@@ -75,9 +75,81 @@ class RecipeList(Resource):
         if not data:
             return jsonify({"error": "Invalid input"}), 400
         
-       
+    
         recipe_id = recipes_collection.insert_one(data).inserted_id
         return jsonify({"message": "Recipe created successfully", "id": str(recipe_id)}), 201
+    
+# ------------------------------ Ingredient Endpoints ----------------------------
+
+@api.route('/Ingredients')
+class IngredientList(Resource):
+    def get(self):
+        """Retrieve ingredients with filters"""
+        filters = {}
+        if 'name' in request.args:
+            filters['name'] = request.args['name']
+
+        ingredients = list(ingredients_collection.find(filters))
+        for ingredient in ingredients:
+            ingredient['_id'] = str(ingredient['_id'])
+        return jsonify(ingredients)
+
+    @jwt_required() 
+    def post(self):
+        """Add a new ingredient"""
+        data = request.get_json()  
+        if not data:
+            return jsonify({"error": "Invalid input"}), 400
+        
+        ingredient_id = ingredients_collection.insert_one(data).inserted_id
+        return jsonify({"message": "Ingredient created successfully", "id": str(ingredient_id)}), 201
+
+# ------------------------------ User Authentication Endpoints ------------------------------
+
+@api.route('/users/login')
+class UserLogin(Resource):
+    def post(self):
+        """User login to receive JWT"""
+        data = request.get_json()
+        email = data.get('email')
+        password = data.get('password')
+
+        user = users_collection.find_one({"email": email})
+        if user and user['password'] == password: 
+            access_token = create_access_token(identity=email)
+            return jsonify({"token": access_token}), 200
+        return jsonify({"error": "Invalid credentials"}), 401
+
+# ------------------------------ Recipe Specific Endpoints ------------------------------
+
+@api.route('/Recipes/<string:name>')
+class Recipe(Resource):
+    def get(self, name):
+        """Retrieve a specific recipe by name"""
+        recipe = recipes_collection.find_one({"name": name})
+        if recipe:
+            recipe['_id'] = str(recipe['_id'])
+            return jsonify(recipe)
+        return jsonify({"error": "Recipe not found"}), 404
+
+    @jwt_required()  
+    def put(self, name):
+        """Update a recipe by name"""
+        data = request.get_json()
+        result = recipes_collection.update_one({"name": name}, {"$set": data})
+        if result.modified_count > 0:
+            return jsonify({"message": "Recipe updated successfully"})
+        return jsonify({"error": "Recipe not found"}), 404
+
+    @jwt_required()  
+    def delete(self, name):
+        """Delete a specific recipe by name"""
+        result = recipes_collection.delete_one({"name": name})
+        if result.deleted_count > 0:
+            return jsonify({"message": "Recipe deleted successfully"})
+        return jsonify({"error": "Recipe not found"}), 404
+
+# ------------------------------ Main Section ------------------------------
 
 if __name__ == '__main__':
     app.run(debug=True)
