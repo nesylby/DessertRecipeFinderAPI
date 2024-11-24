@@ -1,14 +1,14 @@
 from flask import Flask, jsonify, request
-from flask_restx import Api, Resource
+from flask_restx import Api, Resource, fields, reqparse
 from flask_jwt_extended import JWTManager, jwt_required, create_access_token
 from pymongo import MongoClient
 from datetime import timedelta
 import yaml
 
-
 # Initialize Flask app
 app = Flask(__name__)
 
+# MongoDB connection setup
 client = MongoClient("mongodb://localhost:27017/")  
 db = client['RecAPI']  
 recipes_collection = db['Recipes']
@@ -33,6 +33,18 @@ with open('openAPI.yaml', 'r') as file:
     openapi_spec = yaml.safe_load(file)
 api.specs = openapi_spec 
 
+# Define request model (for post/put requests)
+recipe_model = api.model('Recipe', {
+    'name': fields.String(required=True, description='The name of the recipe'),
+    'category': fields.String(description='The category of the recipe'),
+    'origin': fields.String(description='The country of origin'),
+    'type': fields.String(description='Type of dessert'),
+    'ingredients': fields.List(fields.String, description='Ingredients used in the recipe'),
+    'calories': fields.Integer(description='Calories per serving'),
+    'difficulty': fields.String(description='Difficulty of the recipe'),
+    'Vegan': fields.String(description='Is the recipe vegan?'),
+    'author': fields.String(description='Author of the recipe'),
+})
 
 # ------------------------------ Recipe Endpoints ------------------------------
 
@@ -41,41 +53,59 @@ class RecipeList(Resource):
     def get(self):
         """Retrieve recipes with filters"""
         filters = {}
-        if 'category' in request.args:
-            filters['category'] = request.args['category']
-        if 'origin' in request.args:
-            filters['origin'] = request.args['origin']
-        if 'type' in request.args:
-            filters['type'] = request.args['type']
-        if 'serve_size' in request.args:
-            filters['serve_size'] = int(request.args['serve_size'])
-        if 'main_ingredient' in request.args:
-            filters['main_ingredient'] = request.args['main_ingredient']
-        if 'allergen' in request.args:
-            filters['allergen'] = request.args['allergen']
-        if 'dietary_benefits' in request.args:
-            filters['dietary_benefits'] = request.args['dietary_benefits']
-        if 'calories' in request.args:
-            filters['calories'] = {'$lte': int(request.args['calories'])}
-        if 'difficulty' in request.args:
-            filters['difficulty'] = request.args['difficulty']
-        if 'Vegan' in request.args:
-            filters['Vegan'] = request.args['Vegan']
-        if 'Author' in request.args:
-            filters['Author'] = request.args['Author']
+
+        # Define query parameters for filtering recipes
+        parser = reqparse.RequestParser()
+        parser.add_argument('category', type=str, help='Category of the recipe')
+        parser.add_argument('origin', type=str, help='Origin of the recipe')
+        parser.add_argument('type', type=str, help='Type of the recipe')
+        parser.add_argument('serve_size', type=int, help='Serving size')
+        parser.add_argument('main_ingredient', type=str, help='Main ingredient')
+        parser.add_argument('allergen', type=str, help='Allergen information')
+        parser.add_argument('dietary_benefits', type=str, help='Dietary benefits')
+        parser.add_argument('calories', type=int, help='Maximum calories')
+        parser.add_argument('difficulty', type=str, help='Difficulty of the recipe')
+        parser.add_argument('Vegan', type=str, help='Vegan option (YES/NO)')
+        parser.add_argument('Author', type=str, help='Author of the recipe')
+
+        args = parser.parse_args()
+
+        if args['category']:
+            filters['category'] = args['category']
+        if args['origin']:
+            filters['origin'] = args['origin']
+        if args['type']:
+            filters['type'] = args['type']
+        if args['serve_size']:
+            filters['serve_size'] = args['serve_size']
+        if args['main_ingredient']:
+            filters['main_ingredient'] = args['main_ingredient']
+        if args['allergen']:
+            filters['allergen'] = args['allergen']
+        if args['dietary_benefits']:
+            filters['dietary_benefits'] = args['dietary_benefits']
+        if args['calories']:
+            filters['calories'] = {'$lte': args['calories']}
+        if args['difficulty']:
+            filters['difficulty'] = args['difficulty']
+        if args['Vegan']:
+            filters['Vegan'] = args['Vegan']
+        if args['Author']:
+            filters['Author'] = args['Author']
 
         recipes = list(recipes_collection.find(filters))
         for recipe in recipes:
-            recipe['_id'] = str(recipe['_id'])  
+            recipe['_id'] = str(recipe['_id'])  # Convert ObjectId to string for JSON response
+
         return jsonify(recipes)
 
+    @api.expect(recipe_model)  # Expect data matching the 'Recipe' model for POST
     def post(self):
         """Add a new recipe"""
         data = request.get_json()  
         if not data:
             return jsonify({"error": "Invalid input"}), 400
         
-    
         recipe_id = recipes_collection.insert_one(data).inserted_id
         return jsonify({"message": "Recipe created successfully", "id": str(recipe_id)}), 201
     
@@ -90,7 +120,7 @@ class UserLogin(Resource):
         password = data.get('password')
 
         user = users_collection.find_one({"email": email})
-        if user and user['password'] == password: 
+        if user and user['password'] == password:  # Ensure passwords are hashed in production
             access_token = create_access_token(identity=email)
             return jsonify({"token": access_token}), 200
         return jsonify({"error": "Invalid credentials"}), 401
@@ -107,7 +137,8 @@ class Recipe(Resource):
             return jsonify(recipe)
         return jsonify({"error": "Recipe not found"}), 404
 
-    @jwt_required()  
+    @jwt_required()  # Protect this endpoint by requiring a valid JWT token
+    @api.expect(recipe_model)  # Expect data matching the 'Recipe' model for PUT
     def put(self, name):
         """Update a recipe by name"""
         data = request.get_json()
@@ -116,7 +147,7 @@ class Recipe(Resource):
             return jsonify({"message": "Recipe updated successfully"})
         return jsonify({"error": "Recipe not found"}), 404
 
-    @jwt_required()  
+    @jwt_required()  # Protect this endpoint by requiring a valid JWT token
     def delete(self, name):
         """Delete a specific recipe by name"""
         result = recipes_collection.delete_one({"name": name})
