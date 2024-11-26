@@ -1,0 +1,182 @@
+[{
+  "_id": {
+    "$oid": "67429c859263e4e91aaaa8d5"
+  },
+  "recipeID": "D001",
+  "is_vegan": false,
+  "is_vegetarian": true,
+  "is_gluten_free": false,
+  "allergens": [
+    "Nuts",
+    "Dairy"
+  ]
+},
+{
+  "_id": {
+    "$oid": "67429c859263e4e91aaaa8d6"
+  },
+  "recipeID": "D002",
+  "is_vegan": true,
+  "is_vegetarian": true,
+  "is_gluten_free": true,
+  "allergens": [
+    "Nuts"
+  ]
+},
+{
+  "_id": {
+    "$oid": "67429c859263e4e91aaaa8d7"
+  },
+  "recipeID": "D003",
+  "is_vegan": false,
+  "is_vegetarian": true,
+  "is_gluten_free": false,
+  "allergens": [
+    "Dairy",
+    "Wheat"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6742b34d9263e4e91aaaa91f"
+  },
+  "recipeID": "D005",
+  "is_vegan": false,
+  "is_vegetarian": true,
+  "is_gluten_free": true,
+  "allergens": [
+    "Eggs",
+    "Dairy"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6742b34d9263e4e91aaaa920"
+  },
+  "recipeID": "D006",
+  "is_vegan": false,
+  "is_vegetarian": false,
+  "is_gluten_free": false,
+  "allergens": [
+    "Eggs",
+    "Dairy",
+    "Gluten"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6742b34d9263e4e91aaaa921"
+  },
+  "recipeID": "D007",
+  "is_vegan": false,
+  "is_vegetarian": true,
+  "is_gluten_free": false,
+  "allergens": [
+    "Eggs",
+    "Dairy",
+    "Gluten"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6742b34d9263e4e91aaaa922"
+  },
+  "recipeID": "D008",
+  "is_vegan": true,
+  "is_vegetarian": true,
+  "is_gluten_free": true,
+  "allergens": []
+},
+{
+  "_id": {
+    "$oid": "6742b34d9263e4e91aaaa923"
+  },
+  "recipeID": "D009",
+  "is_vegan": false,
+  "is_vegetarian": false,
+  "is_gluten_free": true,
+  "allergens": [
+    "Dairy"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6742b34d9263e4e91aaaa924"
+  },
+  "recipeID": "D010",
+  "is_vegan": true,
+  "is_vegetarian": true,
+  "is_gluten_free": true,
+  "allergens": []
+},
+{
+  "_id": {
+    "$oid": "6742b34d9263e4e91aaaa925"
+  },
+  "recipeID": "D011",
+  "is_vegan": false,
+  "is_vegetarian": false,
+  "is_gluten_free": true,
+  "allergens": [
+    "Eggs"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6742b34d9263e4e91aaaa926"
+  },
+  "recipeID": "D012",
+  "is_vegan": false,
+  "is_vegetarian": false,
+  "is_gluten_free": true,
+  "allergens": [
+    "Eggs"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6742b34d9263e4e91aaaa927"
+  },
+  "recipeID": "D013",
+  "is_vegan": true,
+  "is_vegetarian": true,
+  "is_gluten_free": true,
+  "allergens": []
+},
+{
+  "_id": {
+    "$oid": "6742b34d9263e4e91aaaa928"
+  },
+  "recipeID": "D014",
+  "is_vegan": false,
+  "is_vegetarian": false,
+  "is_gluten_free": true,
+  "allergens": [
+    "Dairy",
+    "Eggs"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6742b34d9263e4e91aaaa929"
+  },
+  "recipeID": "D015",
+  "is_vegan": false,
+  "is_vegetarian": false,
+  "is_gluten_free": true,
+  "allergens": [
+    "Dairy"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6742ba0e3c23cbd203532632"
+  },
+  "recipeID": "D004",
+  "is_vegan": true,
+  "is_vegetarian": true,
+  "is_gluten_free": true,
+  "allergens": [
+    "Coconut"
+  ]
+}]

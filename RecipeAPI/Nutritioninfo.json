@@ -1,0 +1,164 @@
+[{
+  "_id": {
+    "$oid": "67429cc79263e4e91aaaa8d8"
+  },
+  "recipeID": "D001",
+  "calories_per_serving": 350,
+  "protein_grams": 5,
+  "fat_grams": 15,
+  "carbohydrates_grams": 50,
+  "sugar_grams": 20
+},
+{
+  "_id": {
+    "$oid": "67429cc79263e4e91aaaa8d9"
+  },
+  "recipeID": "D002",
+  "calories_per_serving": 250,
+  "protein_grams": 3,
+  "fat_grams": 8,
+  "carbohydrates_grams": 45,
+  "sugar_grams": 35
+},
+{
+  "_id": {
+    "$oid": "67429cc79263e4e91aaaa8da"
+  },
+  "recipeID": "D003",
+  "calories_per_serving": 400,
+  "protein_grams": 6,
+  "fat_grams": 18,
+  "carbohydrates_grams": 55,
+  "sugar_grams": 25
+},
+{
+  "_id": {
+    "$oid": "6742b3539263e4e91aaaa92a"
+  },
+  "recipeID": "D005",
+  "calories_per_serving": 220,
+  "protein_grams": 6,
+  "fat_grams": 14,
+  "carbohydrates_grams": 25,
+  "sugar_grams": 22
+},
+{
+  "_id": {
+    "$oid": "6742b3539263e4e91aaaa92b"
+  },
+  "recipeID": "D006",
+  "calories_per_serving": 500,
+  "protein_grams": 7,
+  "fat_grams": 30,
+  "carbohydrates_grams": 50,
+  "sugar_grams": 35
+},
+{
+  "_id": {
+    "$oid": "6742b3539263e4e91aaaa92c"
+  },
+  "recipeID": "D007",
+  "calories_per_serving": 380,
+  "protein_grams": 7,
+  "fat_grams": 25,
+  "carbohydrates_grams": 30,
+  "sugar_grams": 18
+},
+{
+  "_id": {
+    "$oid": "6742b3539263e4e91aaaa92d"
+  },
+  "recipeID": "D008",
+  "calories_per_serving": 350,
+  "protein_grams": 3,
+  "fat_grams": 8,
+  "carbohydrates_grams": 75,
+  "sugar_grams": 0
+},
+{
+  "_id": {
+    "$oid": "6742b3539263e4e91aaaa92e"
+  },
+  "recipeID": "D009",
+  "calories_per_serving": 400,
+  "protein_grams": 7,
+  "fat_grams": 30,
+  "carbohydrates_grams": 30,
+  "sugar_grams": 5
+},
+{
+  "_id": {
+    "$oid": "6742b3539263e4e91aaaa92f"
+  },
+  "recipeID": "D010",
+  "calories_per_serving": 200,
+  "protein_grams": 1,
+  "fat_grams": 0,
+  "carbohydrates_grams": 55,
+  "sugar_grams": 40
+},
+{
+  "_id": {
+    "$oid": "6742b3539263e4e91aaaa930"
+  },
+  "recipeID": "D011",
+  "calories_per_serving": 250,
+  "protein_grams": 2,
+  "fat_grams": 9,
+  "carbohydrates_grams": 50,
+  "sugar_grams": 10
+},
+{
+  "_id": {
+    "$oid": "6742b3539263e4e91aaaa931"
+  },
+  "recipeID": "D012",
+  "calories_per_serving": 300,
+  "protein_grams": 4,
+  "fat_grams": 10,
+  "carbohydrates_grams": 50,
+  "sugar_grams": 12
+},
+{
+  "_id": {
+    "$oid": "6742b3539263e4e91aaaa932"
+  },
+  "recipeID": "D013",
+  "calories_per_serving": 200,
+  "protein_grams": 2,
+  "fat_grams": 8,
+  "carbohydrates_grams": 35,
+  "sugar_grams": 15
+},
+{
+  "_id": {
+    "$oid": "6742b3539263e4e91aaaa933"
+  },
+  "recipeID": "D014",
+  "calories_per_serving": 270,
+  "protein_grams": 3,
+  "fat_grams": 10,
+  "carbohydrates_grams": 40,
+  "sugar_grams": 18
+},
+{
+  "_id": {
+    "$oid": "6742b3539263e4e91aaaa934"
+  },
+  "recipeID": "D015",
+  "calories_per_serving": 230,
+  "protein_grams": 3,
+  "fat_grams": 7,
+  "carbohydrates_grams": 45,
+  "sugar_grams": 12
+},
+{
+  "_id": {
+    "$oid": "6742ba133c23cbd203532633"
+  },
+  "recipeID": "D004",
+  "calories": 350,
+  "protein": 3,
+  "carbs": 75,
+  "fat": 8
+}]

@@ -1,0 +1,558 @@
+[{
+  "_id": {
+    "$oid": "67429c609263e4e91aaaa8c8"
+  },
+  "recipeID": "D001",
+  "name": "Sticky Rice",
+  "quantity": 2,
+  "unit": "cups"
+},
+{
+  "_id": {
+    "$oid": "67429c609263e4e91aaaa8c9"
+  },
+  "recipeID": "D001",
+  "name": "Coconut Milk",
+  "quantity": 1,
+  "unit": "can"
+},
+{
+  "_id": {
+    "$oid": "67429c609263e4e91aaaa8ca"
+  },
+  "recipeID": "D001",
+  "name": "Sugar",
+  "quantity": 1,
+  "unit": "cup"
+},
+{
+  "_id": {
+    "$oid": "67429c609263e4e91aaaa8cb"
+  },
+  "recipeID": "D002",
+  "name": "Shaved Ice",
+  "quantity": 3,
+  "unit": "cups"
+},
+{
+  "_id": {
+    "$oid": "67429c609263e4e91aaaa8cc"
+  },
+  "recipeID": "D002",
+  "name": "Sweetened Beans",
+  "quantity": 1,
+  "unit": "cup"
+},
+{
+  "_id": {
+    "$oid": "67429c609263e4e91aaaa8cd"
+  },
+  "recipeID": "D002",
+  "name": "Fruits (Banana, Jackfruit)",
+  "quantity": 1,
+  "unit": "cup"
+},
+{
+  "_id": {
+    "$oid": "67429c609263e4e91aaaa8ce"
+  },
+  "recipeID": "D002",
+  "name": "Leche Flan",
+  "quantity": 1,
+  "unit": "slice"
+},
+{
+  "_id": {
+    "$oid": "67429c609263e4e91aaaa8cf"
+  },
+  "recipeID": "D003",
+  "name": "Strawberries",
+  "quantity": 2,
+  "unit": "cups"
+},
+{
+  "_id": {
+    "$oid": "67429c609263e4e91aaaa8d0"
+  },
+  "recipeID": "D003",
+  "name": "Cake Flour",
+  "quantity": 2,
+  "unit": "cups"
+},
+{
+  "_id": {
+    "$oid": "67429c609263e4e91aaaa8d1"
+  },
+  "recipeID": "D003",
+  "name": "Butter",
+  "quantity": 1,
+  "unit": "cup"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd2035325e8"
+  },
+  "recipeID": "D005",
+  "name": "Sugar",
+  "quantity": 1,
+  "unit": "cup"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd2035325e9"
+  },
+  "recipeID": "D005",
+  "name": "Water",
+  "quantity": 0.25,
+  "unit": "cup"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd2035325ea"
+  },
+  "recipeID": "D005",
+  "name": "Eggs",
+  "quantity": 5,
+  "unit": "pcs"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd2035325eb"
+  },
+  "recipeID": "D005",
+  "name": "Condensed Milk",
+  "quantity": 1,
+  "unit": "can"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd2035325ec"
+  },
+  "recipeID": "D005",
+  "name": "Evaporated Milk",
+  "quantity": 1,
+  "unit": "can"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd2035325ed"
+  },
+  "recipeID": "D005",
+  "name": "Vanilla Extract",
+  "quantity": 1,
+  "unit": "tsp"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd2035325ee"
+  },
+  "recipeID": "D006",
+  "name": "Butter",
+  "quantity": 0.5,
+  "unit": "cup"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd2035325ef"
+  },
+  "recipeID": "D006",
+  "name": "Chocolate",
+  "quantity": 6,
+  "unit": "oz"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd2035325f0"
+  },
+  "recipeID": "D006",
+  "name": "Eggs",
+  "quantity": 2,
+  "unit": "pcs"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd2035325f1"
+  },
+  "recipeID": "D006",
+  "name": "Sugar",
+  "quantity": 0.5,
+  "unit": "cup"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd2035325f2"
+  },
+  "recipeID": "D006",
+  "name": "Vanilla Extract",
+  "quantity": 1,
+  "unit": "tsp"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd2035325f3"
+  },
+  "recipeID": "D006",
+  "name": "Flour",
+  "quantity": 0.25,
+  "unit": "cup"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd2035325f4"
+  },
+  "recipeID": "D007",
+  "name": "Egg Yolks",
+  "quantity": 6,
+  "unit": "pcs"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd2035325f5"
+  },
+  "recipeID": "D007",
+  "name": "Sugar",
+  "quantity": 0.5,
+  "unit": "cup"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd2035325f6"
+  },
+  "recipeID": "D007",
+  "name": "Mascarpone Cheese",
+  "quantity": 8,
+  "unit": "oz"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd2035325f7"
+  },
+  "recipeID": "D007",
+  "name": "Heavy Cream",
+  "quantity": 1,
+  "unit": "cup"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd2035325f8"
+  },
+  "recipeID": "D007",
+  "name": "Ladyfingers",
+  "quantity": 24,
+  "unit": "pcs"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd2035325f9"
+  },
+  "recipeID": "D007",
+  "name": "Espresso",
+  "quantity": 1,
+  "unit": "cup"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd2035325fa"
+  },
+  "recipeID": "D007",
+  "name": "Coffee Liqueur",
+  "quantity": 0.25,
+  "unit": "cup"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd2035325fb"
+  },
+  "recipeID": "D007",
+  "name": "Cocoa Powder",
+  "quantity": 2,
+  "unit": "tbsp"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd2035325fc"
+  },
+  "recipeID": "D008",
+  "name": "Sticky Rice",
+  "quantity": 1,
+  "unit": "cup"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd2035325fd"
+  },
+  "recipeID": "D008",
+  "name": "Coconut Milk",
+  "quantity": 1,
+  "unit": "can"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd2035325fe"
+  },
+  "recipeID": "D008",
+  "name": "Sugar",
+  "quantity": 0.5,
+  "unit": "cup"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd2035325ff"
+  },
+  "recipeID": "D008",
+  "name": "Salt",
+  "quantity": 0.25,
+  "unit": "tsp"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd203532600"
+  },
+  "recipeID": "D008",
+  "name": "Mango",
+  "quantity": 2,
+  "unit": "pcs"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd203532601"
+  },
+  "recipeID": "D009",
+  "name": "Cream Cheese",
+  "quantity": 16,
+  "unit": "oz"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd203532602"
+  },
+  "recipeID": "D009",
+  "name": "Sugar",
+  "quantity": 1,
+  "unit": "cup"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd203532603"
+  },
+  "recipeID": "D009",
+  "name": "Vanilla Extract",
+  "quantity": 1,
+  "unit": "tsp"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd203532604"
+  },
+  "recipeID": "D009",
+  "name": "Eggs",
+  "quantity": 4,
+  "unit": "pcs"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd203532605"
+  },
+  "recipeID": "D010",
+  "name": "Egg Whites",
+  "quantity": 4,
+  "unit": "pcs"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd203532606"
+  },
+  "recipeID": "D010",
+  "name": "Sugar",
+  "quantity": 1,
+  "unit": "cup"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd203532607"
+  },
+  "recipeID": "D010",
+  "name": "Vanilla Extract",
+  "quantity": 1,
+  "unit": "tsp"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd203532608"
+  },
+  "recipeID": "D011",
+  "name": "Apples",
+  "quantity": 6,
+  "unit": "pcs"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd203532609"
+  },
+  "recipeID": "D011",
+  "name": "Sugar",
+  "quantity": 0.5,
+  "unit": "cup"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd20353260a"
+  },
+  "recipeID": "D011",
+  "name": "Cinnamon",
+  "quantity": 1,
+  "unit": "tsp"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd20353260b"
+  },
+  "recipeID": "D011",
+  "name": "Flour",
+  "quantity": 2,
+  "unit": "tbsp"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd20353260c"
+  },
+  "recipeID": "D012",
+  "name": "Bananas",
+  "quantity": 2,
+  "unit": "pcs"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd20353260d"
+  },
+  "recipeID": "D012",
+  "name": "Toffee",
+  "quantity": 1,
+  "unit": "can"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd20353260e"
+  },
+  "recipeID": "D013",
+  "name": "Strawberries",
+  "quantity": 2,
+  "unit": "cups"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd20353260f"
+  },
+  "recipeID": "D013",
+  "name": "Whipped Cream",
+  "quantity": 1,
+  "unit": "cup"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd203532610"
+  },
+  "recipeID": "D013",
+  "name": "Biscuits",
+  "quantity": 6,
+  "unit": "pcs"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd203532611"
+  },
+  "recipeID": "D014",
+  "name": "Pumpkin Puree",
+  "quantity": 1,
+  "unit": "can"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd203532612"
+  },
+  "recipeID": "D014",
+  "name": "Eggs",
+  "quantity": 2,
+  "unit": "pcs"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd203532613"
+  },
+  "recipeID": "D014",
+  "name": "Sugar",
+  "quantity": 1,
+  "unit": "cup"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd203532614"
+  },
+  "recipeID": "D015",
+  "name": "Condensed Milk",
+  "quantity": 1,
+  "unit": "can"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd203532615"
+  },
+  "recipeID": "D015",
+  "name": "Lime Juice",
+  "quantity": 0.5,
+  "unit": "cup"
+},
+{
+  "_id": {
+    "$oid": "6742b4da3c23cbd203532616"
+  },
+  "recipeID": "D015",
+  "name": "Egg Yolks",
+  "quantity": 4,
+  "unit": "pcs"
+},
+{
+  "_id": {
+    "$oid": "6742ba073c23cbd20353262d"
+  },
+  "recipeID": "D004",
+  "name": "Sticky Rice",
+  "quantity": 1,
+  "unit": "cup"
+},
+{
+  "_id": {
+    "$oid": "6742ba073c23cbd20353262e"
+  },
+  "recipeID": "D004",
+  "name": "Coconut Milk",
+  "quantity": 1,
+  "unit": "can"
+},
+{
+  "_id": {
+    "$oid": "6742ba073c23cbd20353262f"
+  },
+  "recipeID": "D004",
+  "name": "Sugar",
+  "quantity": 0.25,
+  "unit": "cup"
+},
+{
+  "_id": {
+    "$oid": "6742ba073c23cbd203532630"
+  },
+  "recipeID": "D004",
+  "name": "Salt",
+  "quantity": 0.25,
+  "unit": "tsp"
+},
+{
+  "_id": {
+    "$oid": "6742ba073c23cbd203532631"
+  },
+  "recipeID": "D004",
+  "name": "Mango",
+  "quantity": 2,
+  "unit": "pcs"
+}]

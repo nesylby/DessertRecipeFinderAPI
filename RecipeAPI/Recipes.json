@@ -1,0 +1,342 @@
+[{
+  "_id": {
+    "$oid": "674406354087cff473d63a5a"
+  },
+  "recipeID": "D001",
+  "name": "Biko",
+  "description": "A rich and moist Filipino sticky rice cake made with coconut milk, sugar, and glutinous rice, often enjoyed as a dessert or snack.",
+  "origin": "Philippines",
+  "type": "Dessert",
+  "servings": 4,
+  "prep_time": 20,
+  "cook_time": 30,
+  "difficulty": "Moderate",
+  "majorIngredient": "Glutinous Rice",
+  "instructions": [
+    "Step 1: Rinse the glutinous rice thoroughly under cold water to remove excess starch. Place it in a bowl and cover with water. Let it soak for about 30 minutes.",
+    "Step 2: Drain the rice and transfer it to a rice cooker. Add fresh water to the rice, using a 1:1.5 rice-to-water ratio. Cook the rice in the rice cooker until fully cooked, about 20 minutes. The rice should be soft and sticky.",
+    "Step 3: While the rice is cooking, in a separate pan, combine the coconut milk, sugar, and salt. Heat over medium-low heat, stirring occasionally, until the sugar has dissolved, and the mixture begins to simmer.",
+    "Step 4: Once the rice is cooked, add the coconut milk mixture into the rice cooker with the cooked rice. Stir well to ensure the rice is evenly coated with the coconut milk mixture. Continue to cook for an additional 5-10 minutes,       stirring occasionally to avoid burning, until the mixture thickens and becomes sticky.",
+    "Step 5: Once the rice mixture has thickened and the coconut milk is fully absorbed, transfer it to a greased baking dish or pan. Press the rice down firmly to compact it into an even layer.",
+    "Step 6: For the topping, in a separate pan, combine 1 cup of coconut milk with 1/4 cup of sugar. Bring to a simmer over medium heat and cook for 5-10 minutes until slightly thickened.",
+    "Step 7: Pour the coconut topping over the sticky rice, spreading it evenly to cover the surface.",
+    "Step 8: Bake the Biko in a preheated oven at 350°F (175°C) for about 10-15 minutes or until the top is golden brown.",
+    "Step 9: Let the Biko cool for about 15 minutes before slicing it into squares or rectangles. Serve warm or at room temperature. Enjoy!"
+  ],
+  "createdAt": {
+    "$date": "2024-11-23T00:00:00.000Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-23T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "674406a24087cff473d63a5b"
+  },
+  "recipeID": "D002",
+  "name": "Halo-Halo",
+  "description": "A popular Filipino dessert made with mixed sweetened fruits, shaved ice, and milk, topped with ice cream or leche flan.",
+  "origin": "Philippines",
+  "type": "Dessert",
+  "servings": 4,
+  "prep_time": 20,
+  "cook_time": 0,
+  "difficulty": "Easy",
+  "majorIngredient": "Shaved Ice",
+  "instructions": [
+    "Step 1: Prepare the ingredients such as sweetened beans, jellies, and fruits.",
+    "Step 2: Fill a tall glass with layers of prepared ingredients.",
+    "Step 3: Add shaved ice and pour evaporated milk over it.",
+    "Step 4: Top with ice cream, leche flan, or a slice of ube halaya. Serve immediately!"
+  ]
+},
+{
+  "_id": {
+    "$oid": "674406b94087cff473d63a5c"
+  },
+  "recipeID": "D003",
+  "name": "Strawberry Cake",
+  "description": "A delicious layered cake made with fresh strawberries and whipped cream.",
+  "origin": "United States",
+  "type": "Dessert",
+  "servings": 8,
+  "prep_time": 30,
+  "cook_time": 25,
+  "difficulty": "Medium",
+  "majorIngredient": "Strawberries",
+  "instructions": [
+    "Step 1: Preheat the oven to 350°F (175°C). Grease and flour cake pans.",
+    "Step 2: Prepare the batter by mixing flour, sugar, eggs, and baking powder.",
+    "Step 3: Fold in chopped strawberries and pour the batter into prepared pans.",
+    "Step 4: Bake for 25 minutes or until a toothpick inserted comes out clean.",
+    "Step 5: Cool the cakes and layer them with whipped cream and strawberry slices."
+  ]
+},
+{
+  "_id": {
+    "$oid": "674407184087cff473d63a5d"
+  },
+  "recipeID": "D004",
+  "name": "Thai Coconut Sticky Rice with Mango",
+  "description": "A classic Thai dessert made with sticky rice, coconut milk, and ripe mango slices.",
+  "origin": "Thailand",
+  "type": "Dessert",
+  "servings": 4,
+  "prep_time": 15,
+  "cook_time": 20,
+  "difficulty": "Easy",
+  "majorIngredient": "Sticky Rice",
+  "instructions": [
+    "Step 1: Rinse the sticky rice under cold water until the water runs clear. Soak the rice in water for 30 minutes.",
+    "Step 2: In a saucepan, heat coconut milk, sugar, and salt until the sugar dissolves. Set aside.",
+    "Step 3: Cook the sticky rice in a rice cooker or steam it for about 15 minutes until fully cooked.",
+    "Step 4: Once cooked, mix the rice with the coconut milk mixture. Let it sit for 10 minutes.",
+    "Step 5: Slice ripe mangoes and serve them with the coconut sticky rice. Enjoy!"
+  ]
+},
+{
+  "_id": {
+    "$oid": "674407184087cff473d63a5e"
+  },
+  "recipeID": "D005",
+  "name": "Leche Flan",
+  "description": "A smooth and creamy Filipino dessert made with eggs, milk, and sugar, topped with caramelized sugar syrup.",
+  "origin": "Philippines",
+  "type": "Dessert",
+  "servings": 6,
+  "prep_time": 15,
+  "cook_time": 45,
+  "difficulty": "Moderate",
+  "majorIngredient": "Eggs",
+  "instructions": [
+    "Step 1: Preheat the oven to 350°F (175°C). Prepare a 9-inch round baking dish or flan mold.",
+    "Step 2: In a saucepan, combine sugar and water over medium heat. Stir until sugar dissolves, then let it cook until it turns into a golden brown caramel. Quickly pour the caramel into the prepared dish and swirl it to coat the bottom.",
+    "Step 3: In a separate bowl, whisk together the eggs, condensed milk, evaporated milk, and vanilla extract.",
+    "Step 4: Pour the egg mixture over the caramel in the baking dish. Cover the dish with aluminum foil.",
+    "Step 5: Place the flan in a water bath (bain-marie) in the oven, and bake for 45 minutes or until the custard is set.",
+    "Step 6: Allow the leche flan to cool, then refrigerate for at least 2 hours.",
+    "Step 7: To serve, run a knife around the edges of the flan to loosen it, then invert it onto a serving plate."
+  ]
+},
+{
+  "_id": {
+    "$oid": "674407184087cff473d63a5f"
+  },
+  "recipeID": "D006",
+  "name": "Chocolate Lava Cake",
+  "description": "A rich and decadent chocolate cake with a molten center, perfect for dessert lovers.",
+  "origin": "France",
+  "type": "Dessert",
+  "servings": 4,
+  "prep_time": 20,
+  "cook_time": 15,
+  "difficulty": "Moderate",
+  "majorIngredient": "Chocolate",
+  "instructions": [
+    "Step 1: Preheat your oven to 425°F (220°C). Grease four ramekins with butter and dust them with flour.",
+    "Step 2: In a heatproof bowl, melt the butter and chocolate together in the microwave or using a double boiler, stirring occasionally.",
+    "Step 3: In a separate bowl, whisk together the eggs, sugar, and vanilla extract until light and frothy.",
+    "Step 4: Fold the melted chocolate mixture into the egg mixture, then add the flour and salt, mixing until smooth.",
+    "Step 5: Pour the batter into the prepared ramekins, filling them about 3/4 full.",
+    "Step 6: Bake for 12-15 minutes or until the edges are set and the center is soft.",
+    "Step 7: Let the cakes cool for 1 minute before inverting them onto plates. Serve with a scoop of vanilla ice cream or whipped cream."
+  ]
+},
+{
+  "_id": {
+    "$oid": "674407184087cff473d63a60"
+  },
+  "recipeID": "D007",
+  "name": "Tiramisu",
+  "description": "A classic Italian dessert made with coffee-soaked ladyfingers, mascarpone cream, and a dusting of cocoa powder.",
+  "origin": "Italy",
+  "type": "Dessert",
+  "servings": 6,
+  "prep_time": 30,
+  "cook_time": 0,
+  "difficulty": "Moderate",
+  "majorIngredient": "Mascarpone Cheese",
+  "instructions": [
+    "Step 1: In a mixing bowl, whisk together the egg yolks and sugar until pale and thick.",
+    "Step 2: Add the mascarpone cheese and heavy cream to the egg mixture, whisking until smooth.",
+    "Step 3: In a shallow dish, combine the espresso and coffee liqueur. Quickly dip the ladyfingers into the coffee mixture, ensuring they are not too soggy.",
+    "Step 4: Layer the dipped ladyfingers in the bottom of a baking dish or individual serving cups.",
+    "Step 5: Spread half of the mascarpone mixture over the ladyfingers. Repeat the layers with the remaining ladyfingers and mascarpone cream.",
+    "Step 6: Refrigerate the tiramisu for at least 4 hours or overnight.",
+    "Step 7: Before serving, dust the top with cocoa powder and garnish with chocolate shavings."
+  ]
+},
+{
+  "_id": {
+    "$oid": "674407184087cff473d63a61"
+  },
+  "recipeID": "D008",
+  "name": "Mango Sticky Rice",
+  "description": "A popular Thai dessert made with sweet coconut milk and sticky rice, served with ripe mango slices.",
+  "origin": "Thailand",
+  "type": "Dessert",
+  "servings": 4,
+  "prep_time": 10,
+  "cook_time": 15,
+  "difficulty": "Easy",
+  "majorIngredient": "Mango",
+  "instructions": [
+    "Step 1: Rinse the sticky rice under cold water until the water runs clear. Soak the rice in water for 30 minutes.",
+    "Step 2: In a saucepan, heat coconut milk, sugar, and salt until sugar dissolves. Set aside.",
+    "Step 3: Cook the rice in a rice cooker or steam it for 10-15 minutes until fully cooked.",
+    "Step 4: Once cooked, mix the rice with the coconut milk mixture. Let it cool for 15 minutes.",
+    "Step 5: Slice the mangoes and arrange them alongside the sticky rice. Serve and enjoy!"
+  ]
+},
+{
+  "_id": {
+    "$oid": "674407184087cff473d63a62"
+  },
+  "recipeID": "D009",
+  "name": "Cheesecake",
+  "description": "A rich, creamy dessert with a graham cracker crust and a luscious cream cheese filling.",
+  "origin": "USA",
+  "type": "Dessert",
+  "servings": 8,
+  "prep_time": 20,
+  "cook_time": 60,
+  "difficulty": "Moderate",
+  "majorIngredient": "Cream Cheese",
+  "instructions": [
+    "Step 1: Preheat the oven to 325°F (163°C). Grease a 9-inch springform pan.",
+    "Step 2: In a bowl, combine crushed graham crackers, sugar, and melted butter. Press into the bottom of the pan to form the crust.",
+    "Step 3: Beat the cream cheese with sugar and vanilla until smooth. Add eggs one at a time, beating after each addition.",
+    "Step 4: Pour the cream cheese mixture over the crust and smooth the top.",
+    "Step 5: Bake for 60 minutes, or until the center is set. Let it cool completely, then refrigerate for 4 hours.",
+    "Step 6: Serve with fruit topping or whipped cream."
+  ]
+},
+{
+  "_id": {
+    "$oid": "674407184087cff473d63a63"
+  },
+  "recipeID": "D010",
+  "name": "Pavlova",
+  "description": "A crisp meringue shell with a soft, marshmallow-like interior, topped with whipped cream and fresh fruit.",
+  "origin": "New Zealand",
+  "type": "Dessert",
+  "servings": 6,
+  "prep_time": 15,
+  "cook_time": 1,
+  "difficulty": "Moderate",
+  "majorIngredient": "Egg Whites",
+  "instructions": [
+    "Step 1: Preheat the oven to 250°F (120°C). Line a baking sheet with parchment paper.",
+    "Step 2: Whisk egg whites until soft peaks form. Gradually add sugar and continue whisking until stiff peaks form.",
+    "Step 3: Spoon the meringue mixture onto the baking sheet, forming a circular shape.",
+    "Step 4: Bake for 1 hour, then turn off the oven and let it cool inside for 1 hour.",
+    "Step 5: Top the meringue with whipped cream and fresh fruit. Serve immediately."
+  ]
+},
+{
+  "_id": {
+    "$oid": "674407184087cff473d63a64"
+  },
+  "recipeID": "D011",
+  "name": "Apple Pie",
+  "description": "A classic American dessert made with a buttery, flaky crust and a spiced apple filling.",
+  "origin": "USA",
+  "type": "Dessert",
+  "servings": 8,
+  "prep_time": 20,
+  "cook_time": 45,
+  "difficulty": "Moderate",
+  "majorIngredient": "Apple",
+  "instructions": [
+    "Step 1: Preheat the oven to 375°F (190°C). Prepare the pie crust by rolling it out and placing it in a 9-inch pie dish.",
+    "Step 2: In a bowl, combine sliced apples, sugar, cinnamon, and flour. Toss to coat.",
+    "Step 3: Pour the apple mixture into the pie crust, then cover with the second crust. Seal the edges and cut slits in the top.",
+    "Step 4: Bake for 45 minutes, or until golden brown. Let cool before serving."
+  ]
+},
+{
+  "_id": {
+    "$oid": "674407184087cff473d63a65"
+  },
+  "recipeID": "D012",
+  "name": "Banoffee Pie",
+  "description": "A British dessert made with a digestive biscuit crust, toffee, bananas, and whipped cream.",
+  "origin": "UK",
+  "type": "Dessert",
+  "servings": 6,
+  "prep_time": 20,
+  "cook_time": 10,
+  "difficulty": "Moderate",
+  "majorIngredient": "Banana",
+  "instructions": [
+    "Step 1: Prepare the crust by crushing digestive biscuits and mixing with melted butter. Press into the bottom of a pie dish.",
+    "Step 2: For the toffee, melt butter, sugar, and condensed milk in a saucepan over low heat. Simmer for 5 minutes until thickened.",
+    "Step 3: Slice the bananas and layer them over the crust. Pour the toffee mixture over the bananas.",
+    "Step 4: Top with whipped cream and refrigerate for 2 hours before serving."
+  ]
+},
+{
+  "_id": {
+    "$oid": "674407184087cff473d63a66"
+  },
+  "recipeID": "D013",
+  "name": "Strawberry Shortcake",
+  "description": "A delightful dessert made with layers of sweetened biscuits, fresh strawberries, and whipped cream.",
+  "origin": "USA",
+  "type": "Dessert",
+  "servings": 6,
+  "prep_time": 15,
+  "cook_time": 15,
+  "difficulty": "Easy",
+  "majorIngredient": "Strawberries",
+  "instructions": [
+    "Step 1: Preheat the oven to 400°F (200°C). Prepare the shortcake biscuits by combining flour, sugar, baking powder, butter, and milk.",
+    "Step 2: Roll the dough out and cut into rounds. Bake for 15 minutes.",
+    "Step 3: Slice fresh strawberries and mix with sugar to macerate.",
+    "Step 4: Slice the shortcakes and layer with strawberries and whipped cream."
+  ]
+},
+{
+  "_id": {
+    "$oid": "674407184087cff473d63a67"
+  },
+  "recipeID": "D014",
+  "name": "Pumpkin Pie",
+  "description": "A spiced, creamy pumpkin filling inside a flaky pie crust, perfect for fall.",
+  "origin": "USA",
+  "type": "Dessert",
+  "servings": 8,
+  "prep_time": 15,
+  "cook_time": 45,
+  "difficulty": "Moderate",
+  "majorIngredient": "Pumpkin",
+  "instructions": [
+    "Step 1: Preheat the oven to 375°F (190°C). Prepare the pie crust and place it in a 9-inch pie dish.",
+    "Step 2: In a bowl, mix together pumpkin, eggs, sugar, cinnamon, nutmeg, and cream.",
+    "Step 3: Pour the filling into the crust and bake for 45 minutes.",
+    "Step 4: Let the pie cool before serving with whipped cream."
+  ]
+},
+{
+  "_id": {
+    "$oid": "674407184087cff473d63a68"
+  },
+  "recipeID": "D015",
+  "name": "Key Lime Pie",
+  "description": "A tangy and creamy pie with a graham cracker crust, topped with whipped cream.",
+  "origin": "USA",
+  "type": "Dessert",
+  "servings": 6,
+  "prep_time": 15,
+  "cook_time": 10,
+  "difficulty": "Easy",
+  "majorIngredient": "Lime",
+  "instructions": [
+    "Step 1: Preheat the oven to 350°F (175°C). Prepare the crust by mixing graham cracker crumbs with melted butter and pressing into a pie dish.",
+    "Step 2: In a bowl, whisk together condensed milk, lime juice, and egg yolks.",
+    "Step 3: Pour the lime mixture into the crust and bake for 10 minutes.",
+    "Step 4: Let the pie cool and refrigerate for 2 hours.",
+    "Step 5: Top with whipped cream and serve."
+  ]
+}]

@@ -1,0 +1,88 @@
+[{
+  "_id": {
+    "$oid": "67429cf29263e4e91aaaa8e2"
+  },
+  "recipeID": "D001",
+  "userID": "A001",
+  "name": "John Doe",
+  "email": "johndoe@example.com",
+  "role": "Author",
+  "bio": "John is a professional nutritionist and food writer."
+},
+{
+  "_id": {
+    "$oid": "67429cf29263e4e91aaaa8e3"
+  },
+  "recipeID": "D002",
+  "userID": "A002",
+  "name": "Jane Smith",
+  "email": "janesmith@example.com",
+  "role": "Author",
+  "bio": "Jane is a Filipino cuisine expert."
+},
+{
+  "_id": {
+    "$oid": "67429cf29263e4e91aaaa8e4"
+  },
+  "recipeID": "D003",
+  "userID": "A003",
+  "name": "Emily Johnson",
+  "email": "emilyjohnson@example.com",
+  "role": "Author",
+  "bio": "Emily is a baker and food blogger."
+},
+{
+  "_id": {
+    "$oid": "6742b38c9263e4e91aaaa94e"
+  },
+  "recipeID": "D005",
+  "userID": "A004",
+  "name": "Maria Gonzalez",
+  "email": "maria.gonzalez@example.com",
+  "role": "Author",
+  "bio": "Maria is a professional pastry chef specializing in traditional Filipino and Southeast Asian desserts."
+},
+{
+  "_id": {
+    "$oid": "6742b38c9263e4e91aaaa94f"
+  },
+  "recipeID": "D006",
+  "userID": "A004",
+  "name": "Maria Gonzalez",
+  "email": "maria.gonzalez@example.com",
+  "role": "Author",
+  "bio": "Maria is a professional pastry chef specializing in traditional Filipino and Southeast Asian desserts."
+},
+{
+  "_id": {
+    "$oid": "6742b38c9263e4e91aaaa950"
+  },
+  "recipeID": "D007",
+  "userID": "A005",
+  "name": "Jean Dupont",
+  "email": "jean.dupont@example.com",
+  "role": "Author",
+  "bio": "Jean is a French chef with a passion for creating elegant and rich desserts."
+},
+{
+  "_id": {
+    "$oid": "6742b38c9263e4e91aaaa951"
+  },
+  "recipeID": "D009",
+  "userID": "A005",
+  "name": "Jean Dupont",
+  "email": "jean.dupont@example.com",
+  "role": "Author",
+  "bio": "Jean is a French chef with a passion for creating elegant and rich desserts."
+},
+{
+  "_id": {
+    "$oid": "6742b53b3c23cbd203532622"
+  },
+  "recipeID": "D004",
+  "userID": "A006",
+  "name": "Siriwan Phan",
+  "email": "siriwan@example.com",
+  "role": "Author",
+  "bio": "Siriwan is a food blogger and expert in Thai cuisine, specializing in traditional Thai desserts."
+}]

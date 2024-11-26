@@ -1,0 +1,86 @@
+[{
+  "_id": {
+    "$oid": "6742b3879263e4e91aaaa94b"
+  },
+  "userID": "U002",
+  "name": "Alice Smith",
+  "email": "alice.smith@example.com",
+  "role": "student"
+},
+{
+  "_id": {
+    "$oid": "6742b3879263e4e91aaaa94c"
+  },
+  "userID": "U003",
+  "name": "Carlos Rivera",
+  "email": "carlos.rivera@example.com",
+  "role": "instructor"
+},
+{
+  "_id": {
+    "$oid": "6742b3879263e4e91aaaa94d"
+  },
+  "userID": "U004",
+  "name": "Emily Chen",
+  "email": "emily.chen@example.com",
+  "role": "student"
+},
+{
+  "_id": {
+    "$oid": "6742b65c3c23cbd203532626"
+  },
+  "userID": "A004",
+  "name": "Maria Gonzalez",
+  "email": "maria.gonzalez@example.com",
+  "role": "Author",
+  "bio": "Maria is a professional pastry chef specializing in traditional Filipino and Southeast Asian desserts."
+},
+{
+  "_id": {
+    "$oid": "6742b65c3c23cbd203532627"
+  },
+  "userID": "A005",
+  "name": "Jean Dupont",
+  "email": "jean.dupont@example.com",
+  "role": "Author",
+  "bio": "Jean is a French chef with a passion for creating elegant and rich desserts."
+},
+{
+  "_id": {
+    "$oid": "6742b6663c23cbd203532628"
+  },
+  "userID": "A006",
+  "name": "Siriwan Phan",
+  "email": "siriwan@example.com",
+  "role": "student"
+},
+{
+  "_id": {
+    "$oid": "6742b6c53c23cbd203532629"
+  },
+  "userID": "A001",
+  "name": "John Doe",
+  "email": "johndoe@example.com",
+  "role": "Author",
+  "bio": "John is a professional nutritionist and food writer."
+},
+{
+  "_id": {
+    "$oid": "6742b8a93c23cbd20353262b"
+  },
+  "userID": "A003",
+  "name": "Emily Johnson",
+  "email": "emilyjohnson@example.com",
+  "role": "Author",
+  "bio": "Emily is a baker and food blogger."
+},
+{
+  "_id": {
+    "$oid": "6742b8a93c23cbd20353262c"
+  },
+  "userID": "A002",
+  "name": "Jane Smith",
+  "email": "janesmith@example.com",
+  "role": "Author",
+  "bio": "Jane is a Filipino cuisine expert."
+}]
