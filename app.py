@@ -102,32 +102,54 @@ class RecipeList(Resource):
     @api.expect(recipe_model)  # Expect data matching the 'Recipe' model for POST
     def post(self):
         """
-        Add a new recipe
-        Expects a JSON body with fields matching the 'Recipe' model
+        Add a new recipe with all related data.
+        Expects a JSON body containing the entire model.
         """
-        data = request.get_json()  # Parse the incoming JSON request
-        
-        # Validate the request data
-        required_fields = ['Recipe', 'Ingredients', 'type', 'ingredients', 'author']
-        missing_fields = [field for field in required_fields if field not in data]
+        data = request.get_json()
+
+        # Validate main recipe fields
+        if 'Recipe' not in data or not isinstance(data['Recipe'], list) or not data['Recipe']:
+            return jsonify({"error": "Recipe section is missing or invalid"}), 400
+
+        recipe = data['Recipe'][0]
+        required_fields = [
+            "recipeID", "name", "description", "origin", "type", 
+            "servings", "prep_time", "cook_time", "difficulty", 
+            "majorIngredient", "instructions"
+        ]
+        missing_fields = [field for field in required_fields if field not in recipe]
         if missing_fields:
             return jsonify({
-                "error": "Missing required fields",
+                "error": "Missing required fields in Recipe",
                 "missing_fields": missing_fields
             }), 400
-        
-        # Add default values for optional fields if not provided
-        data['calories'] = data.get('calories', 0)  # Default to 0 calories
-        data['difficulty'] = data.get('difficulty', 'Easy')  # Default difficulty
-        data['Vegan'] = data.get('Vegan', 'NO')  # Default Vegan status to NO
-        
-        # Insert the recipe into MongoDB
-        recipe_id = recipes_collection.insert_one(data).inserted_id
-        
-        return jsonify({
-            "message": "Recipe created successfully",
-            "id": str(recipe_id)
-        }), 201
+
+        # Insert Recipe
+        if recipes_collection.find_one({"recipeID": recipe["recipeID"]}):
+            return jsonify({"error": "Recipe with this recipeID already exists"}), 409
+        recipes_collection.insert_one(recipe)
+
+        # Insert related data
+        for section_name, collection in [
+            ("Ingredients", ingredients_collection),
+            ("NutritionInfo", nutritioninfo_collection),
+            ("DietaryBenefits", dietarybenefits_collection),
+            ("Picture", picture_collection),
+            ("Video", video_collection),
+            ("Author", author_collection)
+        ]:
+            if section_name in data:
+                section_data = data[section_name]
+                if isinstance(section_data, list):
+                    for item in section_data:
+                        # Ensure all items include the `recipeID`
+                        if "recipeID" not in item:
+                            return jsonify({
+                                "error": f"Each entry in {section_name} must include a recipeID"
+                            }), 400
+                        collection.insert_one(item)
+
+        return jsonify({"message": "Recipe and related data added successfully"}), 201
     
 # ------------------------------ User Authentication Endpoints ------------------------------
 
